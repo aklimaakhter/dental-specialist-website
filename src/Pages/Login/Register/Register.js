@@ -24,8 +24,9 @@ const Register = () => {
     const handleRegister = event => {
         event.preventDefault();
         const name= event.target.name.value;
-        const email = event.target.email.vaiue;
-        const password = event.target.password.vaiue;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+        console.log(name,email,password)
 
         createUserWithEmailAndPassword(email,password)
     }

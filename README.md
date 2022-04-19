@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Dental Specialist](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Dental Specialist](https://dental-specialist.web.app/).
 
 ## Bullet Point 
 * Services
