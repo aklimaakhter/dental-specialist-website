@@ -8,10 +8,17 @@ const Register = () => {
     const navigateLogin = event => {
         navigate('/login');
     }
+
+    const handleRegister = event => {
+        event.preventDefault();
+        const name = event.target.name.value;
+        const email = event.target.email.value;
+        const password = event.target.password.value;
+    }
     return (
         <div className='text-center w-50 mx-auto'>
             <h2 className='text-primary '>Please Register</h2>
-            <Form >
+            <Form onSubmit={handleRegister}>
                 <Form.Group className="mb-3" controlId="">
                     <Form.Control type="text" placeholder="Your name" />
                 </Form.Group>

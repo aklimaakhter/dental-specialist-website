@@ -6,12 +6,12 @@ import {getAuth} from 'firebase/auth';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDk1ONRBuCRehHMPN_9vQmh81Xo4PRFeWY",
-  authDomain: "dental-specialist.firebaseapp.com",
-  projectId: "dental-specialist",
-  storageBucket: "dental-specialist.appspot.com",
-  messagingSenderId: "1051737455992",
-  appId: "1:1051737455992:web:1c68a59eafd30443ec5c8d"
+  apiKey:process.env.REACT_APP_apiKey,
+  authDomain:process.env.REACT_APP_authDomain,
+  projectId:process.env.REACT_APP_projectId,
+  storageBucket:process.env.REACT_APP_storageBucket,
+  messagingSenderId:process.env.REACT_APP_messagingSenderId,
+  appId:process.env.REACT_APP_appId,
 };
 
 // Initialize Firebase
