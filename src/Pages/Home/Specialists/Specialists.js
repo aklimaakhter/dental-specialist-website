@@ -18,7 +18,7 @@ const specialists = [
 
 const Specialists = () => {
     return (
-        <div className='container'>
+        <div id="specialists" className='container'>
             <h2 className='text-primary text-center mt-5'>Our Specialists</h2>
             <div className='row'>
                 {
