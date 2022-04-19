@@ -1,20 +1,23 @@
 [
     {
         "id": "1",
-        "picture": "https://i.ibb.co/Jyzxf9r/servics-1.png",
-        "name": "Holder Sheppard",
-        "description": ""
+        "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
+        "name": "Cleaning",
+        "description": "",
+        "price":200
     },
     {
         "id": "2",
-        "picture": "https://i.ibb.co/Jyzxf9r/servics-1.png",
-        "name": "Hernandez Sparks",
-        "description": ""
+        "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
+        "name": "Cleaning",
+        "description": "",
+        "price": 200
     },
     {
         "id": "3",
-        "picture": "https://i.ibb.co/Jyzxf9r/servics-1.png",
-        "name": "Christa Miller",
-        "description":""
+        "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
+        "name": "Cleaning",
+        "description":"",
+        "price": 200
     }
 ]
