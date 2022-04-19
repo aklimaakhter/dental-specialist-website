@@ -5,12 +5,16 @@ const Service = ({ service }) => {
     const { picture, name, description, price } = service;
     
     return (
-        <div className='service'>
-            <img src={picture} alt="" />
-            <h2>{name}</h2>
-            <h4>{description}</h4>
-            <p> $ {price}</p>
-            <button>Book:{name}</button>
+        <div className="g-5 col-sm-12 col-md-6 col-lg-4">
+            <div className='card' style={{ width: '18rem' }}>
+                <img src={picture} className="card-img-top" alt="..." />
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
+                    <p className="card-text">{description}</p>
+                    <p className="card-text"> $ {price}</p>
+                    <a href="#" className="btn btn-primary">Appointment</a>
+                </div>
+            </div>
         </div>
     );
 };
