@@ -1,38 +1,44 @@
 import React from 'react';
-import { Button, Form } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
+import './Register.css';
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import auth from '../../../firebase.init';
+
+
 
 const Register = () => {
-    const navigate = useNavigate();
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useCreateUserWithEmailAndPassword(auth);
 
-    const navigateLogin = event => {
+
+    const navigate =useNavigate();
+
+    const navigateLogin = () =>{
         navigate('/login');
     }
 
     const handleRegister = event => {
         event.preventDefault();
-        const name = event.target.name.value;
-        const email = event.target.email.value;
-        const password = event.target.password.value;
+        const name= event.target.name.value;
+        const email = event.target.email.vaiue;
+        const password = event.target.password.vaiue;
+
+        createUserWithEmailAndPassword(email,password)
     }
     return (
-        <div className='text-center w-50 mx-auto'>
-            <h2 className='text-primary '>Please Register</h2>
-            <Form onSubmit={handleRegister}>
-                <Form.Group className="mb-3" controlId="">
-                    <Form.Control type="text" placeholder="Your name" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Register
-                </Button>
-            </Form>
-            <p className='mt-5'>Already have an account? <Link to='/login' className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link></p>
+        <div className='register-form'>
+            <h2 style={{textAlign:"center"}}>Please Register</h2>
+            <form onSubmit={handleRegister}>
+                <input type="text" name="name" id="" placeholder='Your name' />
+                <input type="email" name="email" id="" placeholder='Your email' required />
+                <input type="password" name="password" id=""  placeholder='password' required/>
+                <input type="submit" value="Register" />
+            </form>
+            <p className='mt-5'>NAlready have an account? <Link to='/login'  onClick={navigateLogin}>Please Register</Link></p>
         </div>
     );
 };

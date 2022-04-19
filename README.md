@@ -9,6 +9,13 @@ This project was bootstrapped with [Dental Specialist](https://github.com/facebo
 * Set env variable of firebase config
 * Responsive website
 
+## Framworks and libraries
+* Ract firebase hooks
+* React router dom
+* React bootstrap
+* Vanila css
+`
+
 In the project directory, you can run:
 
 ### `npm start`

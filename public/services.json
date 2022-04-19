@@ -2,22 +2,22 @@
     {
         "id": "1",
         "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
-        "name": "Cleaning",
-        "description": "",
+        "name": " Teeth Cleaning",
+        "description": "All the more reason to not only maintain your teeth, but also your gums, because brushing alone will not get you there. An appointment for a teeth cleaning treatment offers the perfect solution for this.",
         "price":200
     },
     {
         "id": "2",
-        "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
-        "name": "Cleaning",
-        "description": "",
+        "picture": "https://i.ibb.co/sRw1pK3/service2.jpg",
+        "name": "Dental Implants",
+        "description": "Implants form the root of a crown, bridge of click denture. A dental implant is actually an artificial root of a tooth which replaces the original absent root.  ",
         "price": 200
     },
     {
         "id": "3",
-        "picture": "https://i.ibb.co/8jg6jhM/servics-1.png",
-        "name": "Cleaning",
-        "description":"",
+        "picture": "https://i.ibb.co/4sVvFCr/servics-3.jpg",
+        "name": "Regular treatments",
+        "description":"During the checkup, the dentist can detect a cavity, inflammation . The dentist will discuss the follow-up treatment with you in advance and in This gives you peace of mind and you know exactly where you stand.",
         "price": 200
     }
 ]

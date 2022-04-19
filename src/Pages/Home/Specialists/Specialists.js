@@ -8,12 +8,12 @@ import specialist6 from '../../../images/specialist/specialist 6.png';
 import Specialist from '../Specialist/Specialist';
 
 const specialists = [
-    { id: 1, name: '', img: specialist1 },
-    { id: 2, name: '', img: specialist2 },
-    { id: 3, name: '', img: specialist3 },
-    { id: 4, name: '', img: specialist4 },
-    { id: 5, name: '', img: specialist5 },
-    { id: 6, name: '', img: specialist6 }
+    { id: 1, name: 'Elina vergier ', designation:' DENTIST DDA, MA', img: specialist1 },
+    { id: 2, name: 'Dr. Mileidis Pena Marro', designation: ' DENTIST DDA', img: specialist2 },
+    { id: 3, name: 'Simon Rosenberg', designation: ' DENTIST DMD', img: specialist3 },
+    { id: 4, name: 'Michel Heller', designation:'DENTISTDDS', img: specialist4 },
+    { id: 5, name: 'Dr. Norman Turkowitz', designation:  ' D.M.D', img: specialist5 },
+    { id: 6, name: 'Lindsay Hill ', designation: 'DENTIST DDS', img: specialist6 }
 ]
 
 const Specialists = () => {
