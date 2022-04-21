@@ -4,16 +4,17 @@ This project was bootstrapped with [Dental Specialist](https://dental-specialist
 
 ## Bullet Point 
 * Services
-* Proteckted route
-* Sign in and Register toggle
-* Set env variable of firebase config
+* Protected route
+* Sign in and Register button toggle
+* Email verification
 * Responsive website
 
-## Framworks and libraries
-* Ract firebase hooks
+## Frameworks and libraries
+* React firebase hooks
 * React router dom
 * React bootstrap
-* Vanila css
+* Vanilla css
+* bootstrap
 `
 
 In the project directory, you can run:
