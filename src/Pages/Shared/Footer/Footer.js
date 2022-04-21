@@ -1,11 +1,16 @@
 import React from 'react';
+import copyrightIcon from '../../../images/icon/copyright icon.png'
 
 const Footer = () => {
-    const today= new Date();
+    const today = new Date();
     const year = today.getFullYear();
     return (
         <footer className='text-center mt-5'>
-            <p><small>copyright @ {year}</small></p>
+            
+            <p><span>copyright @ {year}</span></p>
+                
+                
+           
         </footer>
     );
 };
