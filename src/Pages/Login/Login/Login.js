@@ -6,9 +6,10 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
-import {toast} from 'react-toastify';
+import { toast } from 'react-toastify';
 
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -26,42 +27,45 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
-   
+
     let errorElement;
 
     if (loading || sending) {
         return <Loading></Loading>
     }
 
-    if (error ) {
-        errorElement =<p className='text-danger'>Error: {error?.message}</p>
-        
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+
     }
 
-    if(user){
-        navigate(from, { replace: true });
+    if (user) {
+        // navigate(from, { replace: true });
     }
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
         event.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        signInWithEmailAndPassword(email, password)
+        await signInWithEmailAndPassword(email, password);
+        const { data } = await axios.post('http://localhost:5000/login',{email})
+        localStorage.setItem('accessToken', data.accessToken);
+        navigate(from, { replace: true });
     }
 
     const navigateRegister = event => {
         navigate('/register');
     }
-    
-    const resetPassword = async() => {
+
+    const resetPassword = async () => {
         const email = emailRef.current.value;
-       if(email){
-           await sendPasswordResetEmail(email);
-           toast('Sent email');
-       }
-       else{
-           toast('Please enter your email address');
-       }
+        if (email) {
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else {
+            toast('Please enter your email address');
+        }
     }
     return (
         <div className='text-center w-50 mx-auto'>
@@ -71,7 +75,7 @@ const Login = () => {
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password"required/>
+                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
                 </Form.Group>
                 <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">
                     <span>Login</span>
@@ -79,9 +83,9 @@ const Login = () => {
                 {errorElement}
             </Form>
             <p className='mt-3'>New to this page? <Link to='/register' className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
-            <p className='mt-3'>Forget Password? <button  className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
+            <p className='mt-3'>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button></p>
             <SocialLogin></SocialLogin>
-            
+
         </div>
     );
 };
